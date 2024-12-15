@@ -1,0 +1,14 @@
+bin/
+include/
+lib/
+lib64/
+pyvenv.cfg
+frontend/.next/
+frontend/node_modules/
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+media/
+staticfiles/
