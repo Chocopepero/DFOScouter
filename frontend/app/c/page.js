@@ -20,7 +20,7 @@ export default function Char() {
 
   useEffect(() => {
     // Fetch data from Django backend
-    fetch('/api/your-endpoint')
+    fetch('http://127.0.0.1:8000/api/data/')
       .then(response => response.json())
       .then(data => setData(data))
       .catch(error => console.error('Error fetching data:', error));
@@ -30,7 +30,8 @@ export default function Char() {
     <div className="flex flex-col lg:flex-row m-8 main-content">
       <div className="min-w-80 max-w-80 h-80 bg-gradient-to-r from-cyan-500 to-blue-500 shadow-lg lg:sticky lg:top-16 rounded-lg lg:mr-8 mb-8 lg:mb-0">
         {/* Character Picture Window */}
-        <p> Character Picture Here</p>
+        <h1>Next.js + Django Integration</h1>
+        {data ? <p>{data.message}</p> : <p>Loading...</p>}
       </div>
       <div className="flex-1 bg-gradient-to-r from-red-500 to-yellow-500 rounded-lg">
         <div className="p-4">
@@ -73,7 +74,6 @@ export default function Char() {
             </div>
             {!isMinimizedStats && (
               <div className="bg-stone-600 p-4 rounded shadow">
-                {/* Content of Window 2 */}
                 <p>This is the content of Stats.</p>
               </div>
             )}
@@ -85,7 +85,6 @@ export default function Char() {
             </div>
             {!isMinimizedSkills && (
               <div className="bg-stone-600 p-4 rounded shadow">
-                {/* Content of Window 2 */}
                 <p>This is the content of Skills.</p>
               </div>
             )}
@@ -97,7 +96,6 @@ export default function Char() {
             </div>
             {!isMinimizedTraits && (
               <div className="bg-stone-600 p-4 rounded shadow">
-                {/* Content of Window 2 */}
                 <p>This is the content of Traits.</p>
               </div>
             )}
