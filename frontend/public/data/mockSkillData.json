@@ -1,0 +1,291 @@
+{
+    "serverId" : "cain",
+    "characterId" : "edece46e4d571263beb22859dec887d8",
+    "characterName" : "Toreho",
+    "level" : 110,
+    "jobId" : "c21b43973c6d3fd9f192e9b66925c9b9",
+    "jobGrowId" : "ec6a93f4d14bb36ccc541183291197a7",
+    "jobName" : "Knight",
+    "jobGrowName" : "Neo: Dragon Knight",
+    "fame" : 64966,
+    "adventureName" : "KekSquad",
+    "guildId" : "ff73a340fdde9999f6d96c3fd7d19ae0",
+    "guildName" : "NoFunAllowed",
+    "skill" : {
+      "hash" : "eJwVykESgWAAhuH3S79MpYVBZmwxreQSruMKhphSYmonN7CxsLNwqS6AZ/20lm93NnTXIOZY6EVP6IOe6IEctEMJwzfuHh3QEaVMM2Yn3IIoJzrjliwu6EpYMa4JG0Y3gjuDpZxY3kq2q64nJ5Dpy/gyocxE5je21BTkNJSkxKrI+Eug/QLRhxnG",
+      "style" : {
+        "active" : [ {
+          "skillId" : "4e995a5ff20512f33d684dc87ee25395",
+          "name" : "Backstep",
+          "level" : 1,
+          "requiredLevel" : 1,
+          "costType" : "SP"
+        }, {
+          "skillId" : "b791c07a766fb2dd08ad9726058aecec",
+          "name" : "Shield Uppercut",
+          "level" : 1,
+          "requiredLevel" : 1,
+          "costType" : "SP"
+        }, {
+          "skillId" : "afe3e772827fcae485fd429c08b5d715",
+          "name" : "Quick Rebound",
+          "level" : 1,
+          "requiredLevel" : 1,
+          "costType" : "SP"
+        }, {
+          "skillId" : "0f9b0eeaddd5c961f1d4e2ba3159b3c9",
+          "name" : "Lion Kick",
+          "level" : 1,
+          "requiredLevel" : 1,
+          "costType" : "SP"
+        }, {
+          "skillId" : "107165c9def0ee20eb8d246af1f689b2",
+          "name" : "Finish!",
+          "level" : 1,
+          "requiredLevel" : 10,
+          "costType" : "SP"
+        }, {
+          "skillId" : "a8448d351e3409d59308466ae3d86684",
+          "name" : "Leap",
+          "level" : 1,
+          "requiredLevel" : 10,
+          "costType" : "SP"
+        }, {
+          "skillId" : "49fb37408256256704003f6e8a2fdd7f",
+          "name" : "Dragon Tooth",
+          "level" : 1,
+          "requiredLevel" : 15,
+          "costType" : "SP"
+        }, {
+          "skillId" : "56b4e824edf2362899696bfa85dad4a6",
+          "name" : "Dragon Wing",
+          "level" : 1,
+          "requiredLevel" : 15,
+          "costType" : "SP"
+        }, {
+          "skillId" : "98ffaa11293b4b76366877c701273222",
+          "name" : "Fire Breath",
+          "level" : 1,
+          "requiredLevel" : 15,
+          "costType" : "SP"
+        }, {
+          "skillId" : "b53fd5c798dfff11f21cc15bdf184eeb",
+          "name" : "Summon Astra",
+          "level" : 20,
+          "requiredLevel" : 20,
+          "costType" : "SP"
+        }, {
+          "skillId" : "ecae0798236870213a4830e76c95bd94",
+          "name" : "Blitz Strike",
+          "level" : 1,
+          "requiredLevel" : 20,
+          "costType" : "SP"
+        }, {
+          "skillId" : "2a74002fdd41bcbfd0de0dc384445557",
+          "name" : "Piercing Horn",
+          "level" : 1,
+          "requiredLevel" : 25,
+          "costType" : "SP"
+        }, {
+          "skillId" : "f95880baec7d2dc21a81d706c5032082",
+          "name" : "Knuckle Blaster",
+          "level" : 27,
+          "requiredLevel" : 30,
+          "costType" : "SP"
+        }, {
+          "skillId" : "cd725e555f483504a57e35c9ec15bcc8",
+          "name" : "Dragon Fang",
+          "level" : 36,
+          "requiredLevel" : 30,
+          "costType" : "SP"
+        }, {
+          "skillId" : "f50f00932d33184cda6f0b39dc047b8d",
+          "name" : "Binge",
+          "level" : 10,
+          "requiredLevel" : 30,
+          "costType" : "SP"
+        }, {
+          "skillId" : "c998980e60c78e467032e793503d4d22",
+          "name" : "Spinning Raid",
+          "level" : 40,
+          "requiredLevel" : 35,
+          "costType" : "SP"
+        }, {
+          "skillId" : "f4706d310de897d8479abc58603b1502",
+          "name" : "Dragon Smash",
+          "level" : 40,
+          "requiredLevel" : 35,
+          "costType" : "SP"
+        }, {
+          "skillId" : "158547b2b7af25a8147e888871713196",
+          "name" : "Dragon Warrior Princess",
+          "level" : 38,
+          "requiredLevel" : 40,
+          "costType" : "SP"
+        }, {
+          "skillId" : "efd87693d1c8f914d96989ade6a78a1e",
+          "name" : "Breath of the Storm",
+          "level" : 1,
+          "requiredLevel" : 45,
+          "costType" : "SP"
+        }, {
+          "skillId" : "a07344337a35adc5bd6a7dbd065fb499",
+          "name" : "Roaring Lightning",
+          "level" : 13,
+          "requiredLevel" : 50,
+          "costType" : "SP"
+        }, {
+          "skillId" : "66549443103747b1bc754ea7568502ba",
+          "name" : "Biting Dragon",
+          "level" : 22,
+          "requiredLevel" : 60,
+          "costType" : "SP"
+        }, {
+          "skillId" : "487e21943d491d799e43bd31e5925438",
+          "name" : "Ascending Dragon",
+          "level" : 23,
+          "requiredLevel" : 70,
+          "costType" : "SP"
+        }, {
+          "skillId" : "ed14bf2b846af0fbf652b3cd07152eca",
+          "name" : "Meteor Buster",
+          "level" : 21,
+          "requiredLevel" : 75,
+          "costType" : "SP"
+        }, {
+          "skillId" : "763e8b40d44ca4014b497fdcd11bf6e9",
+          "name" : "Dragon Sortie",
+          "level" : 18,
+          "requiredLevel" : 80,
+          "costType" : "SP"
+        }, {
+          "skillId" : "4acc38c33897b60d88eae56bbec22e9e",
+          "name" : "Ender's Light",
+          "level" : 7,
+          "requiredLevel" : 85,
+          "costType" : "SP"
+        }, {
+          "skillId" : "60d680aa4cf5eacab1f6b68083b32904",
+          "name" : "Lightning Wyvern's Roar",
+          "level" : 11,
+          "requiredLevel" : 95,
+          "costType" : "SP"
+        }, {
+          "skillId" : "e8825eaaa49b4ef8c4467be3ad75af39",
+          "name" : "Dual Strike: Infinite Nova",
+          "level" : 4,
+          "requiredLevel" : 100,
+          "costType" : "SP"
+        } ],
+        "passive" : [ {
+          "skillId" : "8ba3f005ff0f47b06011b58aeca430cc",
+          "name" : "Basic Training",
+          "level" : 110,
+          "requiredLevel" : 1,
+          "costType" : "SP"
+        }, {
+          "skillId" : "ef3240ea9f80412997744f7f3dd66c24",
+          "name" : "Armor Mastery",
+          "level" : 1,
+          "requiredLevel" : 1,
+          "costType" : "SP"
+        }, {
+          "skillId" : "169250ef7120eb2c24e2878dae285328",
+          "name" : "Conversion",
+          "level" : 1,
+          "requiredLevel" : 1,
+          "costType" : "SP"
+        }, {
+          "skillId" : "5ccd37ecc8b3be865b241f2cfd00304c",
+          "name" : "Backstep Upgrade",
+          "level" : 1,
+          "requiredLevel" : 10,
+          "costType" : "SP"
+        }, {
+          "skillId" : "11dff230d112b0b6f3e320612bd41560",
+          "name" : "Dragonoid's Token",
+          "level" : 1,
+          "requiredLevel" : 15,
+          "costType" : "SP"
+        }, {
+          "skillId" : "b4d8b11d88282487a5ad296290478377",
+          "name" : "Focus: Critical",
+          "level" : 10,
+          "requiredLevel" : 20,
+          "costType" : "SP"
+        }, {
+          "skillId" : "16580068dfcb591fcb18eb7e6b98a218",
+          "name" : "Slayer",
+          "level" : 1,
+          "requiredLevel" : 25,
+          "costType" : "SP"
+        }, {
+          "skillId" : "dd99773c8487dcfcaad8540afab7a3a1",
+          "name" : "Gormandizer",
+          "level" : 10,
+          "requiredLevel" : 35,
+          "costType" : "SP"
+        }, {
+          "skillId" : "2c9886aa1f1d6218d15d52f80f15a7ab",
+          "name" : "Dragon Force",
+          "level" : 23,
+          "requiredLevel" : 48,
+          "costType" : "SP"
+        }, {
+          "skillId" : "fc17713d608ba9c644a2b932a0eb5420",
+          "name" : "Knuckle Blaster Upgrade",
+          "level" : 7,
+          "requiredLevel" : 55,
+          "costType" : "TP"
+        }, {
+          "skillId" : "eddb98a75fa50af4307d9a1e40682b7c",
+          "name" : "Dragon Fang Upgrade",
+          "level" : 6,
+          "requiredLevel" : 55,
+          "costType" : "TP"
+        }, {
+          "skillId" : "e7353dc2d5328091ac8ddbd61ac45476",
+          "name" : "Dragon Warrior Princess Upgrade",
+          "level" : 5,
+          "requiredLevel" : 55,
+          "costType" : "TP"
+        }, {
+          "skillId" : "15ca597088e05fdad3edbb18312f459f",
+          "name" : "Spinning Raid Upgrade",
+          "level" : 5,
+          "requiredLevel" : 55,
+          "costType" : "TP"
+        }, {
+          "skillId" : "ef415de700e03a2b7543739b9743a133",
+          "name" : "Dragon Smash Upgrade",
+          "level" : 5,
+          "requiredLevel" : 55,
+          "costType" : "TP"
+        }, {
+          "skillId" : "c4504e4cb54020b8c5086404387bfb04",
+          "name" : "Biting Dragon Upgrade",
+          "level" : 5,
+          "requiredLevel" : 60,
+          "costType" : "TP"
+        }, {
+          "skillId" : "9b0b83a25cad06c5f24cb5d236f582cd",
+          "name" : "Ascending Dragon Upgrade",
+          "level" : 5,
+          "requiredLevel" : 70,
+          "costType" : "TP"
+        }, {
+          "skillId" : "82433a6bcc1b950c4f98d6c212b99fd2",
+          "name" : "Heiress",
+          "level" : 14,
+          "requiredLevel" : 75,
+          "costType" : "SP"
+        }, {
+          "skillId" : "3ca896d4217525d72cf42eb69d3d94dc",
+          "name" : "Dragonsworn",
+          "level" : 7,
+          "requiredLevel" : 95,
+          "costType" : "SP"
+        } ]
+      }
+    }
+  }

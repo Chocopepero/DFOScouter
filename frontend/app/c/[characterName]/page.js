@@ -1,13 +1,14 @@
 'use client';
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
+import SkillTree from '../../components/SkillTree';
 
 // Character Page
 export default function Char() {
   const { characterName } = useParams();
-  const [characterData, setCharacterData] = React.useState(null);
-  const [error, setError] = React.useState(null);
+  const [characterData, setCharacterData] = useState(null);
+  const [skillData, setSkillData] = useState(null);
+  const [error, setError] = useState(null);
 
   const [isMinimizedEquipment, setIsMinimizedEquipment] = useState(false);
   const [isMinimizedBuff, setIsMinimizedBuff] = useState(false);
@@ -15,7 +16,6 @@ export default function Char() {
   const [isMinimizedStats, setIsMinimizedStats] = useState(false);
   const [isMinimizedSkills, setIsMinimizedSkills] = useState(false);
   const [isMinimizedTraits, setIsMinimizedTraits] = useState(false);
-  const [data, setData] = useState(null);
 
   const toggleMinimizeEquipment = () => setIsMinimizedEquipment(!isMinimizedEquipment);
   const toggleMinimizeBuff = () => setIsMinimizedBuff(!isMinimizedBuff);
@@ -24,22 +24,49 @@ export default function Char() {
   const toggleMinimizeSkills = () => setIsMinimizedSkills(!isMinimizedSkills);
   const toggleMinimizeTraits = () => setIsMinimizedTraits(!isMinimizedTraits);
 
+  const fetchSkillData = async (characterId) => {
+    try {
+      console.log(`Fetching skill data for characterId: ${characterId}`);
+      let data;
+      const environment = process.env.NEXT_PUBLIC_ENVIRONMENT;
+
+      if (environment === 'development') {
+        const res = await fetch(`/data/mockSkillData.json`);
+        if (!res.ok) {
+          throw new Error('Failed to load mock data');
+        }
+        data = await res.json();
+      } else {
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+        const res = await fetch(`${apiUrl}/getskills/${characterId}`);
+        if (!res.ok) {
+          throw new Error('Failed to fetch data from live API');
+        }
+        data = await res.json();
+      }
+      // Combine active and passive skills into a single array
+      const combinedSkills = [...data.skill.style.active, ...data.skill.style.passive];
+      setSkillData(combinedSkills);
+    } catch (err) {
+      console.error('Error fetching skill data:', err);
+      setError(err.message);
+    }
+  };
+
   const fetchCharacterData = async (characterName) => {
     try {
-      // Check if the environment is production or development
+      console.log(`Fetching character data for characterName: ${characterName}`);
       const environment = process.env.NEXT_PUBLIC_ENVIRONMENT;
-  
+
       let data;
-      
+
       if (environment === 'development') {
-        // Load data from a local JSON file in development
         const res = await fetch(`/data/mockCharacterData.json`);
         if (!res.ok) {
           throw new Error('Failed to load mock data');
         }
         data = await res.json();
       } else {
-        // Fetch data from live API in production
         const apiUrl = process.env.NEXT_PUBLIC_API_URL;
         const res = await fetch(`${apiUrl}/getchar/${characterName}`);
         if (!res.ok) {
@@ -47,19 +74,29 @@ export default function Char() {
         }
         data = await res.json();
       }
-  
-      setCharacterData(data);
+
+      console.log('Character data fetched:', data);
+      const character = data.rows[0]; // Extract the first character from the rows array
+      setCharacterData(character);
+      if (character.characterId) {
+        console.log(`Character ID: ${character.characterId}`);
+        fetchSkillData(character.characterId);
+      } else {
+        console.log('Character ID not found');
+      }
     } catch (err) {
+      console.error('Error fetching character data:', err);
       setError(err.message);
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
+    console.log(`useEffect called with characterName: ${characterName}`);
     fetchCharacterData(characterName);
   }, [characterName]);
 
   if (error) return <div>Error: {error}</div>;
-  if (!characterData) return <div>Loading...</div>;
+  if (!characterData || !skillData) return <div>Loading...</div>;
 
   return (
     <div className="flex flex-col lg:flex-row m-8 main-content">
@@ -121,7 +158,7 @@ export default function Char() {
             </div>
             {!isMinimizedSkills && (
               <div className="bg-stone-600 p-4 rounded shadow">
-                <p>This is the content of Skills.</p>
+                <SkillTree jobGrowName={characterData.jobGrowName} skillData={skillData} />
               </div>
             )}
           </div>
@@ -139,7 +176,8 @@ export default function Char() {
 
           <div>
             {/* Display fetched data */}
-            {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
+            {characterData && <pre>{JSON.stringify(characterData, null, 2)}</pre>}
+            {skillData && <pre>{JSON.stringify(skillData, null, 2)}</pre>}
           </div>
         </div>
       </div>
