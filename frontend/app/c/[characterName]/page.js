@@ -26,12 +26,28 @@ export default function Char() {
 
   const fetchCharacterData = async (characterName) => {
     try {
-      // Call the Django API with the characterName as a dynamic parameter
-      const res = await fetch(`http://localhost:8000/api/getchar/${characterName}`);
-      if (!res.ok) {
-        throw new Error('Failed to fetch data');
+      // Check if the environment is production or development
+      const environment = process.env.NEXT_PUBLIC_ENVIRONMENT;
+  
+      let data;
+      
+      if (environment === 'development') {
+        // Load data from a local JSON file in development
+        const res = await fetch(`/data/mockCharacterData.json`);
+        if (!res.ok) {
+          throw new Error('Failed to load mock data');
+        }
+        data = await res.json();
+      } else {
+        // Fetch data from live API in production
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+        const res = await fetch(`${apiUrl}/getchar/${characterName}`);
+        if (!res.ok) {
+          throw new Error('Failed to fetch data from live API');
+        }
+        data = await res.json();
       }
-      const data = await res.json();
+  
       setCharacterData(data);
     } catch (err) {
       setError(err.message);
