@@ -26,6 +26,7 @@ body {
   margin-left: 150px;
   width: calc(100% - 150px);
   height: 60px;
+  background: #19cdfa;
 }
 
 /* Fixed sidebar styling */

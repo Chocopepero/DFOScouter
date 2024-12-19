@@ -2,14 +2,19 @@
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import SearchBar from './searchbar';
 
 const Header = () => {
     const currentPath = usePathname();
 
     return (
-        <div className="topbar">
-            <div className="text-xl text-center align-middle bg-blue-400 py-4 pr-4">
-                DFO Scouter
+        <div className='topbar flex justify-between items-center'>
+            <div className="text-xl text-left py-4 pl-4 w-1/3">
+                DFO Scouter 
+            </div>
+            <div className='w-1/3' />
+            <div className=' flex justify-end w-1/3 mr-4'>
+            <SearchBar className="z-10"/>  
             </div>
         </div>
     );
