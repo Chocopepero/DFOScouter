@@ -7,10 +7,11 @@ const SkillTree = ({ jobGrowName, skillData }) => {
   const layouts = {
     "Neo: Dragon Knight": [
       { id: "4e995a5ff20512f33d684dc87ee25395", gridColumn: 1, gridRow: 1 },
+      { id: "afe3e772827fcae485fd429c08b5d715", gridColumn: 2, gridRow: 1 },
+      { id: "8ba3f005ff0f47b06011b58aeca430cc", gridColumn: 3, gridRow: 1 },
+      { id: "a8448d351e3409d59308466ae3d86684", gridColumn: 4, gridRow: 1 },
       null,
-      null,
-      null,
-      { id: "b791c07a766fb2dd08ad9726058aecec", gridColumn: 5, gridRow: 1 },
+      { id: "b791c07a766fb2dd08ad9726058aecec", gridColumn: 6, gridRow: 1 },
       { id: "afe3e772827fcae485fd429c08b5d715", gridColumn: 2, gridRow: 2 },
       null,
       null,

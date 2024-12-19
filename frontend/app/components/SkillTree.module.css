@@ -2,8 +2,10 @@
 .skillTree {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(10, 1fr);
   gap: 10px;
+  width: 60%;
+  height: 100%;
 }
 
 .skillIcon {
@@ -16,11 +18,13 @@
   border-radius: 8px;
   position: relative;
   text-align: center;
+  width: 96px;
+  height: 96px;
 }
 
 .skillImage {
-  width: 48px;
-  height: 48px;
+  width: 96px;
+  height: 96px;
 }
 
 .skillLevel {
@@ -35,6 +39,7 @@
 }
 
 .emptySlot {
-  border: 1px dashed rgba(255, 255, 255, 0.3);
   background-color: transparent;
+  width: 96px;
+  height: 96px;
 }

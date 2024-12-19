@@ -26,7 +26,6 @@ body {
   margin-left: 150px;
   width: calc(100% - 150px);
   height: 60px;
-  z-index: 999; /* Second most visible layer*/
 }
 
 /* Fixed sidebar styling */
@@ -35,7 +34,6 @@ body {
   top: 0; /* Sticky to the top */
   left: 0; /* Sticky to the left */
   width: 150px; /* Adjust width */
-  z-index: 1000; /* The most visible layer */
 }
 
 /* Main content styling */
