@@ -4,11 +4,11 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import SearchBar from './searchbar';
 
-const Header = () => {
+const Header = ({className}) => {
     const currentPath = usePathname();
 
     return (
-        <div className='topbar flex justify-between items-center'>
+        <div className='topbar flex justify-between items-center bg-blue-500'>
             <div className="text-xl text-left py-4 pl-4 w-1/3">
                 DFO Scouter 
             </div>

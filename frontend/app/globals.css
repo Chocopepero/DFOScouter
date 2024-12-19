@@ -19,29 +19,3 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
-
-.topbar {
-  position: fixed;
-  top: 0; /* Sticky to the top */
-  margin-left: 150px;
-  width: calc(100% - 150px);
-  height: 60px;
-  background: #19cdfa;
-}
-
-/* Fixed sidebar styling */
-.sidebar {
-  position: fixed;
-  top: 0; /* Sticky to the top */
-  left: 0; /* Sticky to the left */
-  width: 150px; /* Adjust width */
-}
-
-/* Main content styling */
-.main-content {
-  margin-left: 150px;
-  margin-top: 60px; /* Adjust for topbar height */
-  padding: 20px;
-  width: calc(100% - 150px); /* Full width minus sidebar */
-  min-height: calc(100vh - 60px); /* Full height minus topbar */
-}
